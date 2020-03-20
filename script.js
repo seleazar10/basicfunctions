@@ -108,43 +108,66 @@
 // }
 
 
-///tip calculator
+// ///tip calculator
 
 
-var difBills = [124, 48, 268]
+// var difBills = [124, 48, 268]
 
-var tipToPay;
-var tip;
-var difTips = []
+// var tipToPay;
+// var tip;
+// var difTips = []
 
-var finalBills = []
+// var finalBills = []
 
-for (var i=0; i< difBills.length; i++){
+// for (var i=0; i< difBills.length; i++){
 
-    if(difBills[i] < 50){
-        tipToPay = .2
-        tip = difBills[i]*tipToPay
-        difTips.push(tip)
-        finalBills.push(tip+difBills[i])
+//     if(difBills[i] < 50){
+//         tipToPay = .2
+//         tip = difBills[i]*tipToPay
+//         difTips.push(tip)
+//         finalBills.push(tip+difBills[i])
     
-    }else if(difBills[i]> 50 && difBills[i]<200){
-        tipToPay = .15
-        tip = difBills[i]*tipToPay
-        difTips.push(tip)
-        finalBills.push(tip+difBills[i])
+//     }else if(difBills[i]> 50 && difBills[i]<200){
+//         tipToPay = .15
+//         tip = difBills[i]*tipToPay
+//         difTips.push(tip)
+//         finalBills.push(tip+difBills[i])
 
 
 
-    }else{
-        tipToPay = .10;
-        tip = difBills[i]*tipToPay
-        difTips.push(tip)
-        finalBills.push(tip+difBills[i])
+//     }else{
+//         tipToPay = .10;
+//         tip = difBills[i]*tipToPay
+//         difTips.push(tip)
+//         finalBills.push(tip+difBills[i])
 
+//     }
+
+//     console.log(difTips)
+//     console.log(finalBills)
+
+
+// }
+
+////---------Objects and properties and Methods
+
+var john = {
+    fistName: "john",
+    lastName: "Smith",
+    birthYear: 1990,
+    family:['Jane', "Mark", "Kyle"],
+    job: "teacher",
+    isMarried: false,
+    calcAge: function(){
+        console.log(this.lastName)
+        return (2020 - this.birthYear)
+
+        
     }
-
-    console.log(difTips)
-    console.log(finalBills)
-
-
 }
+
+
+var age = (john.calcAge());
+john.age = age
+console.log(john)
+
