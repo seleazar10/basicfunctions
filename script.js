@@ -21,22 +21,28 @@
 
 function calculateAge(birthYear) {
 
-    var custoAge = 2020 - birthYear;
-    console.log(custoAge + " years old")
+    return 2020 - birthYear;
+
+    // var custoAge = 2020 - birthYear;
+    // console.log(custoAge + " years old")
 
 }
+
+/////////////////////////////
 
 
 function underageCheck(year, custoName){
      
     
     var age = calculateAge(year)
-    var minAge = 21;
+    var minAge = 21 - age;
 
-    if(age >= minAge){
-        console.log(custoName + ' is good to go!')
+    if(minAge > 0){
+        console.log(custoName + " is " + age + " years old")
+        console.log(custoName + ' is underaged ')
     }else{
-        console.log(custoName + ' is underaged.')
+        console.log(custoName + " is " + age + " years old")
+        console.log(custoName + ' is good to go!')
     }
 }
 
