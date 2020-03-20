@@ -126,7 +126,7 @@
 //         tip = difBills[i]*tipToPay
 //         difTips.push(tip)
 //         finalBills.push(tip+difBills[i])
-    
+
 //     }else if(difBills[i]> 50 && difBills[i]<200){
 //         tipToPay = .15
 //         tip = difBills[i]*tipToPay
@@ -162,7 +162,7 @@
 //         console.log(this.lastName)
 //         return (2020 - this.birthYear)
 
-        
+
 //     }
 // }
 
@@ -172,36 +172,102 @@
 // console.log(john)
 
 
-var john = {
-    fullName: "John Smith",
-    mass: 95,
-    height: 1.8,
-    calcBMI: function(){
-        return (this.mass / (this.height * this.height))
+// var john = {
+//     fullName: "John Smith",
+//     mass: 95,
+//     height: 1.8,
+//     calcBMI: function(){
+//         return (this.mass / (this.height * this.height))
+//     }
+
+// }
+
+
+// var mark = {
+//     fullName: "Mark Twain",
+//     mass: 105,
+//     height: 2.1,
+//     calcBMI: function(){
+//         return (this.mass / (this.height*this.height))
+//     }
+// }
+
+// console.log(john.calcBMI())
+// john.BMI = john.calcBMI()
+// console.log(john)
+
+// console.log(mark.calcBMI())
+// mark.BMI = mark.calcBMI()
+// console.log(mark)
+
+// if(john.BMI > mark.BMI){
+//     console.log(john.fullName + ' BMI is higher')
+// }else{
+//     console.log('Mark BMI is higher')
+// }
+
+
+
+// var john = ["money", "love", "fame", 14, "time", false]
+
+
+// // for (var i = 0; i < john.length; i++){
+// //     if(typeof john[i] !== "string"){
+// //         console.log('not a string - boom boom')
+// //     }else{
+// //         console.log('string')
+// //     }
+// // }
+
+
+// if(john.includes('love')){
+//     console.log('yess')
+// }else{
+//     console.log('noo')
+// }
+
+
+////----tip calculator with object
+
+
+johnInitBill = {
+    fistName: "John",
+    eachBill: [124, 48, 268, 180, 42],
+    eachTip: [],
+    eachFinalBill: [],
+    calcTips: function () {
+        for (var i = 0; i < this.eachBill.length; i++) {
+
+            var tip;
+            
+
+            if (this.eachBill[i] < 50) {
+
+                tip = this.eachBill[i] * .28
+                
+
+            } else if (this.eachBill[i] >= 50 && this.eachBill[i] <= 200) {
+               
+                tip = this.eachBill[i] * .15              
+              
+
+            } else {
+                
+                tip = this.eachBill[i] * .10              
+                               
+
+            }
+
+
+            this.eachTip.push(tip)
+            this.eachFinalBill.push(this.eachBill[i] + tip)
+
+            console.log(this.eachTip)
+            console.log(this.eachFinalBill)
+        }
     }
 
+
 }
 
-
-var mark = {
-    fullName: "Mark Twain",
-    mass: 105,
-    height: 2.1,
-    calcBMI: function(){
-        return (this.mass / (this.height*this.height))
-    }
-}
-
-console.log(john.calcBMI())
-john.BMI = john.calcBMI()
-console.log(john)
-
-console.log(mark.calcBMI())
-mark.BMI = mark.calcBMI()
-console.log(mark)
-
-if(john.BMI > mark.BMI){
-    console.log(john.fullName + ' BMI is higher')
-}else{
-    console.log('Mark BMI is higher')
-}
+johnInitBill.calcTips()
