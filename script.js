@@ -151,23 +151,57 @@
 
 ////---------Objects and properties and Methods
 
-var john = {
-    fistName: "john",
-    lastName: "Smith",
-    birthYear: 1990,
-    family:['Jane', "Mark", "Kyle"],
-    job: "teacher",
-    isMarried: false,
-    calcAge: function(){
-        console.log(this.lastName)
-        return (2020 - this.birthYear)
+// var john = {
+//     fistName: "john",
+//     lastName: "Smith",
+//     birthYear: 1990,
+//     family:['Jane', "Mark", "Kyle"],
+//     job: "teacher",
+//     isMarried: false,
+//     calcAge: function(){
+//         console.log(this.lastName)
+//         return (2020 - this.birthYear)
 
         
+//     }
+// }
+
+
+// var age = (john.calcAge());
+// john.age = age
+// console.log(john)
+
+
+var john = {
+    fullName: "John Smith",
+    mass: 95,
+    height: 1.8,
+    calcBMI: function(){
+        return (this.mass / (this.height * this.height))
     }
+
 }
 
 
-var age = (john.calcAge());
-john.age = age
+var mark = {
+    fullName: "Mark Twain",
+    mass: 105,
+    height: 2.1,
+    calcBMI: function(){
+        return (this.mass / (this.height*this.height))
+    }
+}
+
+console.log(john.calcBMI())
+john.BMI = john.calcBMI()
 console.log(john)
 
+console.log(mark.calcBMI())
+mark.BMI = mark.calcBMI()
+console.log(mark)
+
+if(john.BMI > mark.BMI){
+    console.log(john.fullName + ' BMI is higher')
+}else{
+    console.log('Mark BMI is higher')
+}
