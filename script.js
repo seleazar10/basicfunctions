@@ -113,8 +113,38 @@
 
 var difBills = [124, 48, 268]
 
+var tipToPay;
+var tip;
 var difTips = []
 
 var finalBills = []
 
-if ()
+for (var i=0; i< difBills.length; i++){
+
+    if(difBills[i] < 50){
+        tipToPay = .2
+        tip = difBills[i]*tipToPay
+        difTips.push(tip)
+        finalBills.push(tip+difBills[i])
+    
+    }else if(difBills[i]> 50 && difBills[i]<200){
+        tipToPay = .15
+        tip = difBills[i]*tipToPay
+        difTips.push(tip)
+        finalBills.push(tip+difBills[i])
+
+
+
+    }else{
+        tipToPay = .10;
+        tip = difBills[i]*tipToPay
+        difTips.push(tip)
+        finalBills.push(tip+difBills[i])
+
+    }
+
+    console.log(difTips)
+    console.log(finalBills)
+
+
+}
