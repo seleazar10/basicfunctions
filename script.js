@@ -53,29 +53,68 @@
 
 
 
-//switch statement
+// ////switch statement
 
-var whatDoYouDo = function (job, firstName) {
+// var whatDoYouDo = function (job, firstName) {
 
-    switch (job) {
-        case "teacher":
-            return firstName + " is a teacher";
+//     switch (job) {
+//         case "teacher":
+//             return firstName + " is a teacher";
 
-        case "driver":
-            return firstName + " is a driver";
+//         case "driver":
+//             return firstName + " is a driver";
 
-        default:
-            return firstName + " is doing somthing else"
+//         default:
+//             return firstName + " is doing somthing else"
 
 
-    }
+//     }
 
-    console.log()
-}
+//     console.log()
+// }
 
-console.log(
-    whatDoYouDo('driver', 'john')
-)
-console.log(
-    whatDoYouDo('mechanic', 'john')
-)
+// console.log(
+//     whatDoYouDo('driver', 'john')
+// )
+// console.log(
+//     whatDoYouDo('mechanic', 'john')
+// )
+
+
+//////Arrays
+
+// var mariah = ['beautiful', 'teacher', 26, false]
+
+// console.log(mariah)
+
+// mariah.push('nice')
+
+// console.log(mariah)
+
+// mariah.pop()
+// console.log(mariah)
+
+// mariah.shift()
+// console.log(mariah)
+
+
+// var isATeacher = mariah.indexOf('teacher');
+// console.log(isATeacher)
+
+// if (isATeacher >= 0){
+//     console.log('She is a teacher')
+// }else{
+//     console.log('SHE DOES Something ELSE')
+// }
+
+
+///tip calculator
+
+
+var difBills = [124, 48, 268]
+
+var difTips = []
+
+var finalBills = []
+
+if ()
