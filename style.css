@@ -6,7 +6,7 @@
 
 
 body{
-    background-image: url("/carroad.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.349)), url("/carroad.jpeg");
     background-size: cover;
     background-position: center;
     height: 100vh;
