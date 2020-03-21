@@ -264,6 +264,8 @@ johnInitBill = {
 
             console.log(this.eachTip)
             console.log(this.eachFinalBill)
+            console.log("---------------------------")
+            console.log(johnInitBill)
         }
     }
 
